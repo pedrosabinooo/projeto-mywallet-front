@@ -1,14 +1,18 @@
-function Transaction (props) {
-  const {type, date, description, value} = props;
-  return (
-    <div>
-      <div>
-        <p>{date}</p>
-        <p>{description}</p>
-      </div>
-      <p>{value}</p> {/* type => deposit/withdraw */}
-    </div>
-  )
-}
+import {
+  dateTextColor,
+  incomeTextColor,
+  outcomeTextColor,
+} from "../constants/colors";
 
-export default Transaction;
+export default function Transaction(props) {
+  const { type, date, description, value } = props;
+  return (
+    <>
+      <span color={dateTextColor}>{date}</span>
+      <span>{description}</span>
+      <span color={type === "deposit" ? incomeTextColor : outcomeTextColor}>
+        {value}
+      </span>
+    </>
+  );
+}

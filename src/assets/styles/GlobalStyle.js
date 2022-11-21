@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { backgroundColor } from "../../constants/colors";
 
 const GlobalStyle = createGlobalStyle`
     html, body, div, span, applet, object, iframe,
@@ -18,8 +19,8 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         border: 0;
         font-size: 100%;
-        font: inherit;
         vertical-align: baseline;
+        text-decoration: none;
     }
     /* HTML5 display-role reset for older browsers */
     article, aside, details, figcaption, figure, 
@@ -46,7 +47,8 @@ const GlobalStyle = createGlobalStyle`
     }
     * {
         box-sizing: border-box;
-        --background-color: '#920ABA';
+        font-family: 'Raleway', sans-serif;
+        background-color: ${backgroundColor};
     }
 `;
 
